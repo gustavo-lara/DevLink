@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +8,16 @@
 
 :root {
   --bg-url: url(../img/bg-desktop.jpg);
+  --text-color: white;
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Modificações no body */
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
 }
 
 body {
@@ -13,12 +25,16 @@ body {
   height: 100vh;
 }
 
+/* Modificações container */
+
 #container {
   width: 100%;
   max-width: 588px;
   margin: 56px auto 0px;
   padding: 0px 24px;
 }
+
+/* Modificações na imagem e texto do perfil */
 
 #profile {
   text-align: center;
@@ -31,4 +47,63 @@ body {
   border-radius: 50%;
   border: 3px solid rgba(146, 146, 146, 0.8);
   object-fit: cover;
+}
+
+#profile p {
+  margin-top: 8px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+/* Botão */
+
+/* LINKS */
+
+#links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+}
+
+#links ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+  background: var(--surface-color);
+
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* SOCIAL LINKS */
+
+#socialLinks {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+  gap: 16px;
+
+  font-size: 24px;
+}
+
+#socialLinks a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#footer {
+  text-align: center;
+  font-size: 18px;
+  padding: 24px;
+}
+
+#footer a {
+  text-decoration: none;
 }
